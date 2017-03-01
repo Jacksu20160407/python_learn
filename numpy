@@ -41,4 +41,4 @@ array([[ 7.,  3.],
 array([[ 7.,  3.,  2.,  7.],
        [ 8.,  5.,  5.,  4.]])
 
-   
+3. 推荐一个关于numpy中广播的ｐｏｓｔ：http://blog.csdn.net/yangnanhai93/article/details/50127747
