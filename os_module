@@ -16,8 +16,16 @@
 
 检验给出的路径是否真地存:os.path.exists()
 
-返回一个路径的目录名和文件名:os.path.split()     eg os.path.split('/home/swaroop/byte/code/poem.txt') 结果：('/home/swaroop/byte/code', 'poem.txt') 
-
+返回一个路径的目录名和文件名:os.path.split()     
+    eg os.path.split('/home/swaroop/byte/code/poem.txt') 结果：('/home/swaroop/byte/code', 'poem.txt') 
+       但是这个并不是智能的，因为os.path.split()只是通过判断最后一个'/'来分割的，分割后索引为0的判断为目录，索引为1的判断为文件
+       >>> import os
+　　　　>>> os.path.split('C:/soft/python/test.py')
+　　　　　　('C:/soft/python', 'test.py')
+　　　　>>> os.path.split('C:/soft/python/test')
+　　　　　　('C:/soft/python', 'test')
+　　　　>>> os.path.split('C:/soft/python/')
+　　　　　　('C:/soft/python', '')
 分离扩展名：os.path.splitext()
 
 获取路径名：os.path.dirname()
