@@ -6,6 +6,21 @@ tensorflow-tensorboard
 　　多么愚蠢呀！！！（以前敲python晕倒等号会手贱自动添加空格，多么痛的领悟～～～～啊！啊！啊！）
  ３．　这个的运行要在source activate rootclone下运行，其他不可以（这是我的原因）
 #####################################
+看过的Ｐｏｓｔ：　　　
+  
+学习TensorFlow，TensorBoard可视化网络结构和参数<http://blog.csdn.net/helei001/article/details/51842531>,这个主要讲解了A simple MNIST classifier which displays summaries in TensorBoard　　　　
+　　TensorBoard是用来展示深度学习训练和测试过程中各个参数的变化情况，首先TensorBoard输入是日志文件，enent.****，输出是通过一个可视化文件。需要的日志文件
+  　是TF汇总的数据，包括scalar，images，audio，histogram和graph等。
+整个过程可以分为：１．设置变量跟踪点；tf.summary.scalar('mean', mean);tf.summary.histogram('histogram', var);tf.summary.image('input', image_shaped_input, 10)
+　　　　　　　　　２．设置op和保存路径；merged = tf.summary.merge_all(),  train_writer = tf.summary.FileWriter(FLAGS.log_dir + '/train', sess.graph), test_writer = tf.summary.FileWriter(FLAGS.log_dir + '/test')
+         　　　　３，运行计算需要跟踪变量并写入文件；summary_str = sess .run( summary_op, feed_dict ={x: batch[0 ], y: batch[1 ], keep_prob:(1.0)}),summary_writer.add_summary (summary_str, i)
+             　　４，程序结束关闭写入硬盘;summary_writer.close()  
+               ５，启动Tensorboard;tensorboard --logdir=/home/Alex/tensorboard/log
+坑：　graph重叠
+    在多次运行TensorFlow程序之后，你可能会发现Graph变的越来越复杂，主要是因为default graph并没有自动清理前面几次运行生成的节点，需要手动清理，可以在最开始的时候添加代码重置graph：
+　　 tf.reset_default_graph()
+   graph重叠还可能引发其他问题，如果你用了summary_op = tf.merge_all_summaries()函数，而不是summary_op = tf .merge_summary([cost_summary, accuracy_summary ])，可能会报错：
+　　PlaceHolder error
 # Copyright 2015 The TensorFlow Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the 'License');
