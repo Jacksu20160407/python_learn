@@ -12,7 +12,7 @@ with step in xrange(max_step):
 ```
   b. 命令行<br>
 ```python
-  tensorboard --logdir=path/to/log-directory
+  tensorboard --logdir=path/to/log-directory<br>
 ```
   c. 浏览器打开得到的端口地址即可查看
   
