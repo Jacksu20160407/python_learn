@@ -50,7 +50,7 @@ NOTE:
  ```shell
  $ cp /usr/share/applications/Pycharm.desktop ~/Desktop
  ```
- 这时候桌面上出现Pycharm.desktop文件，但是是灰色的，需要在```桌面路径```下运行以下命令<br>
+ 这时候桌面上出现Pycharm.desktop文件，但是是灰色的，需要在**桌面路径**下运行以下命令<br>
  ```shell
  $ sudo chmod 777   Pycharm.desktop
  ```
