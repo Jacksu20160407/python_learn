@@ -55,6 +55,20 @@ NOTE:
  $ sudo chmod 777   Pycharm.desktop
  ```
  桌面图标正常了，可以通过双击打开pycharm,在lock to launcher
+ ####查看ip
+ ```
+ $ ifconfig
+ ```
+ ##### or 
+ ```
+ iptables -L -n
+ ```
+ #### About SSH
+ 查看shell类型命令：
+ ```
+ $ echo $SHELL
+ ```
+ 
  
 
 
