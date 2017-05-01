@@ -5,3 +5,4 @@
 RNN<br>
  Pyramidal RNN "a neunal network "<br>
  LSTM GRU
+# 李宏毅深度学习的第一集没有看懂，主要是因为rnn和lstm不懂
