@@ -12,3 +12,11 @@ RNN<br>
 http://blog.csdn.net/jiejinquanil/article/details/50042791
 http://www.cnblogs.com/tornadomeet/p/3432093.html
 ```
+
+
+
+# END
+吆西网站：
+```
+http://nooverfit.com/wp/pycon-2016-tensorflow-%E7%A0%94%E8%AE%A8%E4%BC%9A%E6%80%BB%E7%BB%93-tensorflow-%E6%89%8B%E6%8A%8A%E6%89%8B%E5%85%A5%E9%97%A8-%E7%94%A8%E4%BA%BA%E8%AF%9D%E8%A7%A3%E9%87%8Acnn-%E7%AC%AC%E4%B8%89/
+```
