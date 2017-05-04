@@ -6,3 +6,9 @@ RNN<br>
  Pyramidal RNN "a neunal network "<br>
  LSTM GRU
 # 李宏毅深度学习的第一集没有看懂，主要是因为rnn和lstm不懂
+
+#关于Pｏｏｌｉｎｇ层的理解：
+```
+http://blog.csdn.net/jiejinquanil/article/details/50042791
+http://www.cnblogs.com/tornadomeet/p/3432093.html
+```
