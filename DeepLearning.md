@@ -6,8 +6,20 @@ RNN<br>
  Pyramidal RNN "a neunal network "<br>
  LSTM GRU
 # 李宏毅深度学习的第一集没有看懂，主要是因为rnn和lstm不懂
+# 李宏毅第二集
+越复杂的model，性能不一定越好。
+## 模型的误差一般来自两方面：
+1、bias
+2、variance<br>
+至于为什么来自这两方面，涉及到数理与统计的知识。<br>
+随着模型复杂度的增加，bias一般会越来越小，但是variance会越来越大，两者结合起来看的话，相对简单的模型会有大的bias并且小的variance，也可以理解为<br>underfiting（欠拟合），相对复杂的模型会有小的bias并且大的variance，也可以理解为overfiting（过拟合）。<br>
+## 那么如何知道得到的误差是bias大还是variance大呢？？
+如果你的模型在训练集上得到的误差很大，也就是说你的模型fit训练数据很差，那么肯定是bias很大，也就是underfiting，如果你的模型fit训练很好，在训练数据<br>上得到的误差很小，但是在测试数据上得到的误差很大，那么就是variance很大，也就是过拟合。
+一般而言，模型越复杂，得到的variance就越大，因为模型越复杂就对训练数据的拟合就越好，这样得到的模型范化能力就越差，举个简单的例子，若是模型都设为常数c，<br>那么对于任何训练数据得到的都将是一条直线，根本没有variance（貌似这个variance，是相对于模型而言的，(⊙_⊙)?）
+若是bias大，那么variance小，若是variance大，那么bias小，
+Bias and Variance Estimator 关于均值的估计没看懂得。。。。（貌似是来源于概率论与数理统计，不晓得）
 
-#关于Pｏｏｌｉｎｇ层的理解：
+#关于pool层的理解：
 ```
 http://blog.csdn.net/jiejinquanil/article/details/50042791
 http://www.cnblogs.com/tornadomeet/p/3432093.html
