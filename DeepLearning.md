@@ -21,6 +21,8 @@ RNN<br>
 若是bias大，那么variance小，若是variance大，那么bias小，
 Bias and Variance Estimator 关于均值的估计没看懂得。。。。（貌似是来源于概率论与数理统计，不晓得）
 
+## model selection（Cross Validation）
+训练数据一般分为training set和 validation set，其中training set用来训练model， validation set用来选model，如果觉得training变小啦，可以选定model后再training 和validation上训练一次。testing set上如果得到差的
 #关于pool层的理解：
 ```
 http://blog.csdn.net/jiejinquanil/article/details/50042791
