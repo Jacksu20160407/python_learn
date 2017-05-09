@@ -25,7 +25,7 @@
            
            
            
-#### About install 
+## About install 
 ##### pycharm install
 Ubuntu 设置快捷方式启动<br>
 Ubuntu的快捷方式都放在/usr/share/applications，首先在该目录下创建一个Pycharm.desktop<br>
@@ -88,5 +88,20 @@ $xz -d 要解压的.xz文件
  $xz -d xxx.tar.xz
  $tar xvf xxx.tar
  ```
+ ##### 使用镜像加速pip安装Python包<br>
+ 临时使用（注意：simple不能少，是https，而不是http）
+ ```
+ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+ ```
+ 永久使用
+ 修改``~/.pip/pip.conf```（没有就创建一个），修改```index-url```至tuna，例如
+ ```
+ [global]
+ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+ ```
+##### 安装pip
+```
+sudo apg-get install python-pip
+```
 
 
