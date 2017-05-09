@@ -113,7 +113,7 @@ sudo apt-get install python-pandas
 sudo apt-get install python-sklearn
 ```
 也可以使用**pip**安装（recommend）,**pip**可以用来解决项目依赖问题
-##### 安装pip
+#### 安装pip
 安装之前需要安装Python-dev
 apt-get 安装命令
 ```
@@ -161,6 +161,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import datasets, linear_model
+```
+#### opencv install
+```
+sudo apt-get install python-opencv
 ```
 # From
 ```
