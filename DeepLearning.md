@@ -34,7 +34,7 @@ http://www.cnblogs.com/tornadomeet/p/3432093.html
 ## Learning Rate 调节
 ### Adaptive Learning Rates
 * 1 [Adagrad][1]:<br>
-* 2
+* 2 [SGD][1]:<br>
 
 # END
 吆西网站：
