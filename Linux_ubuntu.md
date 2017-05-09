@@ -99,9 +99,16 @@ $xz -d 要解压的.xz文件
  [global]
  index-url = https://pypi.tuna.tsinghua.edu.cn/simple
  ```
+###安装关于Python环境的包
+安装之前建议更新一下软件源
+```
+sudo apt-get update
+```
 ##### 安装pip
+安装之前
 ```
 sudo apg-get install python-pip
 ```
+#### install numpy 
 
 
