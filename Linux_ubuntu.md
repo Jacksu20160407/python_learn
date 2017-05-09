@@ -99,16 +99,67 @@ $xz -d 要解压的.xz文件
  [global]
  index-url = https://pypi.tuna.tsinghua.edu.cn/simple
  ```
-###安装关于Python环境的包
+### 安装关于Python环境的包
 安装之前建议更新一下软件源
 ```
 sudo apt-get update
 ```
+可以使用apt-get命令安装：<br>
+```
+sudo apt-get install python-numpy
+sudo apt-get install python-scipy
+sudo apt-get install python-matplotlib
+sudo apt-get install python-pandas
+sudo apt-get install python-sklearn
+```
+也可以使用**pip**安装（recommend）,**pip**可以用来解决项目依赖问题
 ##### 安装pip
-安装之前
+安装之前需要安装Python-dev
+apt-get 安装命令
+```
+sudo apt-get install python-dev
+```
+若是这条命令无法安装，可以使用aptitude工具
+```
+sudo apt-get install aptitude
+sudo aptitude install python-dev
+```
+之后就可以安装**pip**啦
 ```
 sudo apg-get install python-pip
 ```
-#### install numpy 
-
+#### 现在利用pip安装数据计算和绘图包
+```
+sudo pip install numpy
+sudo pip install scipy
+sudo pip install matplotlib
+sudo pip install pandas
+```
+若是matplotlib需要安装依赖包libpng和freetype
+安装**libpng**
+```
+sudo apt-get install libpng-dev
+```
+安装**freetype**
+```
+cd ~/Downloads
+wget http://downloas.savannah.gnu.org/releases/freetype/freetype-2.4.10.tar.gz
+tar zxvf freetype-2.4.10.tar.gz
+cd freetype-2.4.10/
+./configure
+make
+sudo make install
+```
+之后在通过**pip**安装**matplotlib**和sklearn
+```
+sudo pip install matplotlib
+sudo pip install -U scikit-learn
+```
+最后测试是否成功
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn import datasets, linear_model
+```
 
