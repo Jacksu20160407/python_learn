@@ -68,7 +68,25 @@ NOTE:
  ```
  $ echo $SHELL
  ```
- 
- 
+ #### 解压文件
+ **.xz**文件：号称压缩率之王，比7z还要小，但是压缩时间比7z长。<br>
+ 创建压缩文件命令：<br>
+```
+$xz -z 要压缩的文件
+```
+解压文件命令：<br>
+```
+$xz -d 要解压的.xz文件
+```
+ 创建tar.xz文件，只要先 tar cvf xxx.tar xxx/ 这样创建xxx.tar文件先，然后使用 xz -z xxx.tar 来将 xxx.tar压缩成为 xxx.tar.xz <br>
+ ```
+ $tar cvf xxx.tar xxx/ 
+ $xz -z xxx.tar
+ ```
+ 解压tar.xz文件，先 xz -d xxx.tar.xz 将 xxx.tar.xz解压成 xxx.tar 然后，再用 tar xvf xxx.tar来解包<br>
+ ```
+ $xz -d xxx.tar.xz
+ $tar xvf xxx.tar
+ ```
 
 
