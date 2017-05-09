@@ -29,8 +29,12 @@ n-fold cross validation:将训练数据分成多分，一份validation，其余�
 http://blog.csdn.net/jiejinquanil/article/details/50042791
 http://www.cnblogs.com/tornadomeet/p/3432093.html
 ```
-
-
+# 第三集 Gradient descent
+## Gradient Descent理论基础
+## Learning Rate 调节
+### Adaptive Learning Rates
+* 1 Adagrad:<br>
+* 2
 
 # END
 吆西网站：
