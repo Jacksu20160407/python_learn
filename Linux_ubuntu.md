@@ -166,8 +166,14 @@ from sklearn import datasets, linear_model
 ```
 sudo apt-get install python-opencv
 ```
+#### 关于cuda的安装可以直接下载**.deb**文件，在下载链接的下面直接有安装的Instructions.
+#### 关于cudnn的安装
+可以参考[2]"从头开始安装Ubuntu,cuda,cudnn,caffe,tensorflow.ROS"。
+
+
 # From
 ```
 1. http://blog.csdn.net/Yakumoyukarilan/article/details/51340358
+2. http://blog.csdn.net/songrotek/article/details/50770154
 ```
 
