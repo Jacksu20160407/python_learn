@@ -99,7 +99,7 @@ $xz -d 要解压的.xz文件
  [global]
  index-url = https://pypi.tuna.tsinghua.edu.cn/simple
  ```
-### 安装关于Python环境的包
+### 安装关于Python环境的包[1]
 安装之前建议更新一下软件源
 ```
 sudo apt-get update
@@ -162,4 +162,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import datasets, linear_model
 ```
-
+# From
+```
+1. http://blog.csdn.net/Yakumoyukarilan/article/details/51340358
+```
