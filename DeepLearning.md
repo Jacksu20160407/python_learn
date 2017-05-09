@@ -1,4 +1,4 @@
-# 李宏毅机器学习笔记
+# 李宏毅机器学习笔记 ####
   将特征值和label画出来，探索两者之间的关系，比如宝可梦cp值和进化后的cp值得关系，可以发现两者之间在不同种类上时，两者之间的关系有差异，这说明要将种类这个选项加入模型中。<br>
   探索输入特征和输出的关系的话，可以将输入特征和label画出来查看两者之间的关系，也就是查看特征值矩阵对于overfitting,可以利用regularation, 主要是在loss最后加上一个λ*w,其中w越小越好，w越小就会使整个模型越平滑，对输入的噪声越不敏感，可以得到比较好的结果。λ越大就表示regularization的重要度越大。另外，regularization不用考虑b的值，因为b的变化，表示整个模型在坐标上的上下移动。
 # 深度学习
@@ -22,8 +22,9 @@ RNN<br>
 Bias and Variance Estimator 关于均值的估计没看懂得。。。。（貌似是来源于概率论与数理统计，不晓得）
 
 ## model selection（Cross Validation）
-训练数据一般分为training set和 validation set，其中training set用来训练model， validation set用来选model，如果觉得training变小啦，可以选定model后再training 和validation上训练一次。testing set上如果得到差的
-#关于pool层的理解：
+训练数据一般分为training set和 validation set，其中training set用来训练model， validation set用来选model，如果觉得training变小啦，可以选定model后再training 和validation上训练一次。testing set上如果得到差的<br>
+n-fold cross validation:将训练数据分成多分，一份validation，其余的training
+# 关于pool层的理解：
 ```
 http://blog.csdn.net/jiejinquanil/article/details/50042791
 http://www.cnblogs.com/tornadomeet/p/3432093.html
