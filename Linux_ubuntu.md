@@ -169,7 +169,13 @@ sudo apt-get install python-opencv
 #### 关于cuda的安装可以直接下载**.deb**文件，在下载链接的下面直接有安装的Instructions.
 #### 关于cudnn的安装
 可以参考[2]"从头开始安装Ubuntu,cuda,cudnn,caffe,tensorflow.ROS"。
+#### 安装cuda和cudnn后，重启无法登陆ubuntu图形界面
+具体原因不知道，但是需要: Ctrl + F1后<br>
+> sudo apt-get purge nvidia*
+> reboot
+>
 
+之后reboot
 
 # From
 ```
