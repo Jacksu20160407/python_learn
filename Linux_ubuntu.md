@@ -170,16 +170,16 @@ sudo apt-get install python-opencv
 #### 关于cudnn的安装
 可以参考[2]"从头开始安装Ubuntu,cuda,cudnn,caffe,tensorflow.ROS"。
 #### 安装cuda和cudnn后，重启无法登陆ubuntu图形界面
-具体原因不知道，但是需要: Ctrl + F1后<br>
-> sudo apt-get purge nvidia*
+具体原因不知道，但是[需要][3]: Ctrl + F1后<br>
+> sudo apt-get purge nvidia* <br>
 > reboot
 >
 
-之后reboot
 
 # From
 ```
 1. http://blog.csdn.net/Yakumoyukarilan/article/details/51340358
 2. http://blog.csdn.net/songrotek/article/details/50770154
 ```
+[3]:https://askubuntu.com/questions/624966/cant-login-after-nvidia-driver-install-v-14-04
 
