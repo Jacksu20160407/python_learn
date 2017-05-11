@@ -176,7 +176,10 @@ sudo apt-get install python-opencv
 >
 ## 关于利用cv2，在灰度图像上画彩色line的问题 ##
 因为灰度图像是单通道图像，彩色图像是三通道图像，所以一般认为在灰度图像上画彩色图不能实现，但是我采用了一种“欺骗”的方法：<br>
-首先，在灰度图像上进行各种图像处理的操作，等操作完成后，利用 **bgr_image= cv2.cvtColor(gray_image, cv2.COLOR_GRAY2BGR)** 将单通道图像变成三通道图像(但是这个三通道图像显示出来还是灰度的，原因不知)，之后就可以在这个所谓的三通道图像上画彩色的线啦。<br>[1].http://blog.csdn.net/sunny2038/article/details/12889059<br>[2].http://blog.csdn.net/zhangxb35/article/details/47275277<br>[3].http://blog.csdn.net/jfuck/article/details/9620889<br>[4].http://blog.csdn.net/caimouse/article/details/62423006?locationNum=2&fps=1<br>[5].http://docs.opencv.org/trunk/d3/dc0/group__imgproc__shape.html#ga17ed9f5d79ae97bd4c7cf18403e1689a<br>[6].http://docs.opencv.org/trunk/d7/d4d/tutorial_py_thresholding.html<br>
+首先，在灰度图像上进行各种图像处理的操作，等操作完成后，利用 **bgr_image= cv2.cvtColor(gray_image, cv2.COLOR_GRAY2BGR)** 将单通道图像变成三通道图像(但是这个三通道图像显示出来还是灰度的，原因不知)，之后就可以在这个所谓的三通道图像上画彩色的线啦。<br>[1].http://blog.csdn.net/sunny2038/article/details/12889059<br>
+[2].http://blog.csdn.net/zhangxb35/article/details/47275277<br>
+[3].http://blog.csdn.net/jfuck/article/details/9620889<br>
+[4].http://blog.csdn.net/caimouse/article/details/62423006?locationNum=2&fps=1<br>[5].http://docs.opencv.org/trunk/d3/dc0/group__imgproc__shape.html#ga17ed9f5d79ae97bd4c7cf18403e1689a<br>[6].http://docs.opencv.org/trunk/d7/d4d/tutorial_py_thresholding.html<br>
 
 ## 关于Numpy[保存数据](http://hyry.dip.jp/tech/book/page/scipy/numpy_file.html)的问题
 ## 关于Numpy-[快速处理数据](http://old.sebug.net/paper/books/scipydoc/numpy_intro.html)
@@ -184,8 +187,8 @@ sudo apt-get install python-opencv
 * 1.直接使用加号
 * 2.使用join方法
 ```python
-    liststr = ['python', 'tab', '.com']<br>
-    website = ''.join(liststr)
+liststr = ['python', 'tab', '.com']<br>
+website = ''.join(liststr)
 ```
 * 3.替换
 ```python
