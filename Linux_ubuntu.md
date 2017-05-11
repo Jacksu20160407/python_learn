@@ -194,6 +194,9 @@ website = ''.join(liststr)
 ```python
 website = '%s%s%s' % ('python', 'tab', '.com')
 ```
+## [SimpleITK Notes](http://insightsoftwareconsortium.github.io/SimpleITK-Notebooks/)
+## [SimpleITK Seg and connect component](https://pyscience.wordpress.com/)
+
 
 # From
 ```
