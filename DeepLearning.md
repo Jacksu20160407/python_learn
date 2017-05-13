@@ -36,6 +36,16 @@ http://www.cnblogs.com/tornadomeet/p/3432093.html
 * 1 [Adagrad][1]:<br>
 * 2 [SGD][1]:<br>
 
+# 第四集
+从概率的角度得出为什么p(x|c) = σ(z), z = w * x + b，也就是它的来源
+
+# 第五集logistics回归
+logistics回归相对于linear回归而言，就是多经过了一个sigmoid函数。
+首先知道模型，之后利用模型sample出某些数据的概率。
+还有交叉熵的来源。
+
+
+
 # END
 吆西网站： 
 ```
