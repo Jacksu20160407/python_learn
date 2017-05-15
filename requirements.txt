@@ -1,0 +1,26 @@
+#
+####### use pip install -r requirements.txt #######
+#
+###### Requirements without Version Specifiers ######
+pympler
+numpy
+scikit-image
+scikit-learn
+matplotlib
+pillow
+scipy
+pprocess
+pandas
+pymongo
+#validators
+SimpleITK
+opencv-python
+protobuf
+#h5py
+#keras
+#theano
+
+
+#
+###### Requirements that have to be installed by apt-get install ######
+# python-tk
