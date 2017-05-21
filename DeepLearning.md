@@ -2,6 +2,7 @@
 ## Contents
 * [记录从TensorFlow中文社区学习TensorFlow的笔记](#记录从TensorFlow中文社区学习TensorFlow的笔记)
 * [Tensorflow offline install](Tensorflow-offline-install)
+* [Notes](#Notes)
 
 ## 记录从TensorFlow中文社区学习TensorFlow的笔记
 * Tensorboard 使用：<br>
@@ -40,7 +41,7 @@ import pip; print(pip.pep425tags.get_supported())
 # 权值初始化
 Xaiver Glorot 和Youhua Bengio在一篇论文中指出，深度学习中权值初始化的太小，那么信号将在每层间传递逐渐缩小而难以产生作用，但是如果权重初始化的太大<br>，那么信号将在每层间传递时逐渐放大并且导致发散和实效。因此，Xavier初始化权重满足0均值，方差为2/(num_in + num_out)分布为均匀分布或者高斯分布。<br>至于其中的原因，还没有查找那篇论文（因为不知道叫什么名字，懒得查）
 
-# Notes
+## Notes
 ### 李宏毅机器学习笔记 ####
   将特征值和label画出来，探索两者之间的关系，比如宝可梦cp值和进化后的cp值得关系，可以发现两者之间在不同种类上时，两者之间的关系有差异，这说明要将种类这个选项加入模型中。<br>
   探索输入特征和输出的关系的话，可以将输入特征和label画出来查看两者之间的关系，也就是查看特征值矩阵对于overfitting,可以利用regularation, 主要是在loss最后加上一个λ**w**,其中w越小越好，w越小就会使整个模型越平滑，对输入的噪声越不敏感，可以得到比较好的结果。λ越大就表示regularization的重要度越大。另外，regularization不用考虑b的值，因为b的变化，表示整个模型在坐标上的上下移动。
