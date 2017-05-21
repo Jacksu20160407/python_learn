@@ -1,4 +1,6 @@
-toc.py <DeepLearning.md>
+toc.py DeepLearning.md
+
+
 [TOC]
 
 # 记录从TensorFlow中文社区学习TensorFlow的笔记
