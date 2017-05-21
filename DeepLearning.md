@@ -32,6 +32,8 @@ import pip; print(pip.pep425tags.get_supported())
 ```
 **看到其中支持的格式了吗？每一个括号中的三项就是从.whl中的.开始往前的样子，比如我原来下载的numpy-1.10.4+mkl-cp27-cp27m-win32.whl需要改成numpy-1.10.4+mkl-cp27-none-win32.whl，看的出区别吧，改完就可以pip install numpy-1.10.4+mkl-cp27-none-win32.whl安装成功啦！！！（真是坑爹呀！！！）**
 **另外protobuf貌似也是同样的问题，也要同样的解决方法**
+# 权值初始化
+Xaiver Glorot 和Youhua Bengio在一篇论文中指出，深度学习中权值初始化的太小，那么信号将在每层间传递逐渐缩小而难以产生作用，但是如果权重初始化的太大<br>，那么信号将在每层间传递时逐渐放大并且导致发散和实效。因此，Xavier初始化权重满足0均值，方差为2/(num_in + num_out)分布为均匀分布或者高斯分布。<br>至于其中的原因，还没有查找那篇论文（因为不知道叫什么名字，懒得查）
 
 # Notes
 ### 李宏毅机器学习笔记 ####
