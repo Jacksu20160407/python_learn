@@ -2,7 +2,7 @@
 bulabulabula....
 ## Contact
 **Author:** xxxx<br>
-**Other:**xxx
+**Other:** xxx
 ## Contents
 * [The first one](#the-first-one)
 * [The second one](#the-second-one)
