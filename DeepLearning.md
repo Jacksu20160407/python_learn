@@ -1,4 +1,9 @@
-# 记录从TensorFlow中文社区学习TensorFlow的笔记
+
+## Contents
+* [记录从TensorFlow中文社区学习TensorFlow的笔记](#记录从TensorFlow中文社区学习TensorFlow的笔记)
+* [Tensorflow offline install](Tensorflow-offline-install)
+
+## 记录从TensorFlow中文社区学习TensorFlow的笔记
 * Tensorboard 使用：<br>
   a. 先merge操作
   
