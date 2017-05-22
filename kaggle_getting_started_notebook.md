@@ -13,7 +13,7 @@
  
 ## Analyze data
 
-    我将这个[学习手册][3]中用到的技巧编辑成了一个Python package [Speedml][1]，你可以下载运行这[Titanic Solution using Speedml][2]。<br>
+  我将这个[学习手册][3]中用到的技巧编辑成了一个Python package [Speedml][1]，你可以下载运行这[Titanic Solution using Speedml][2]。<br>
 我们的目标是：<br>
 - **分类：** 对样本进行分类或者想要理解不同类别样本和我们要解决的问题之间的关系。<br>
 - **相关性分析：** 对样本数据内部不同的特征值进行相关性分析或者将数据内部的特征值和我们要解决的问题之间进行相关性分析，这有助于我们补充缺失的特征值或者对已有的进行校正。<br>
