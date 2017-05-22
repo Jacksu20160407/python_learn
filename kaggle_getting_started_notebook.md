@@ -1,4 +1,19 @@
-我将这个[学习手册][3]中用到的技巧编辑成了一个Python package [Speedml][1]，你可以下载运行这[Titanic Solution using Speedml][2]。<br>
+# kaggle_getting_started_notebook
+## Table of content
+* [workflow of data science solution](#workflow-of-data-science-solution)
+* [Analyze data](#Analyze data)
+
+## workflow of data science solution
+1. Question and Problem Define.
+2. Acquire testing and training data.
+3. Prepare, cleanse, analyze data.
+4. Model, predict and solve problem.
+5. Visualize and present soving steps.
+6. Submits the result.
+ 
+## Analyze data
+
+    我将这个[学习手册][3]中用到的技巧编辑成了一个Python package [Speedml][1]，你可以下载运行这[Titanic Solution using Speedml][2]。<br>
 我们的目标是：<br>
 - **分类：** 对样本进行分类或者想要理解不同类别样本和我们要解决的问题之间的关系。<br>
 - **相关性分析：** 对样本数据内部不同的特征值进行相关性分析或者将数据内部的特征值和我们要解决的问题之间进行相关性分析，这有助于我们补充缺失的特征值或者对已有的进行校正。<br>
@@ -21,23 +36,7 @@
 ## 判别数据<br>
     基于我们的假设和判断丢掉某些数据，为保持一致，在训练集和测试集上都要进行这项操作。<br>
 
-# kaggle_getting_started_notebook
-## Table of content
-* [workflow of data science solution](#workflow-of-data-science-solution)
-* [Analyze data](#Analyze data)
 
-
-
-
-## workflow of data science solution
-1. Question and Problem Define.
-2. Acquire testing and training data.
-3. Prepare, cleanse, analyze data.
-4. Model, predict and solve problem.
-5. Visualize and present soving steps.
-6. Submits the result.
- 
-## Analyze data
 
 [1]:https://speedml.com/
 [2]:https://github.com/Speedml/notebooks/blob/master/titanic/titanic-solution-using-speedml.ipynb
