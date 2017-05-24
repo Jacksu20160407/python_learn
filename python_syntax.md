@@ -7,3 +7,7 @@
     ```
     
 - 生成器？？？
+- map函数
+  map(func_to_apply, list_of_inputs)，其中list_of_inputs是一个迭代器。
+- filter函数
+  filter函数返回满足某些条件的可迭代对象中的元素。
