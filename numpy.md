@@ -1,4 +1,4 @@
-# 1、 numy数组中column为axis = 0，row为axis = 1
+# 1、 numy数组中row 为axis = 0，column为axis = 1
 e.g.
 >>> b = arange(12).reshape(3,4)
 >>> b
@@ -6,13 +6,13 @@ array([[ 0,  1,  2,  3],
        [ 4,  5,  6,  7],
        [ 8,  9, 10, 11]])
 >>>
->>> b.sum(axis=0)                            # sum of each column
+>>> b.sum(axis=0)                            # sum along axis 0
 array([12, 15, 18, 21])
 >>>
->>> b.min(axis=1)                            # min of each row
+>>> b.min(axis=1)                            # min along axis 1
 array([0, 4, 8])
 >>>
->>> b.cumsum(axis=1)                         # cumulative sum along each row
+>>> b.cumsum(axis=1)                         # cumulative sum along axis 1
 array([[ 0,  1,  3,  6],
        [ 4,  9, 15, 22],
        [ 8, 17, 27, 38]])
@@ -42,3 +42,20 @@ array([[ 7.,  3.,  2.,  7.],
        [ 8.,  5.,  5.,  4.]])
 
 3. 推荐一个关于numpy中广播的ｐｏｓｔ：http://blog.csdn.net/yangnanhai93/article/details/50127747
+4. numpy的维度
+    ```
+    >>> a = np.array([1, 2, 3, 4])
+    >>> b = np.array((5, 6, 7, 8))
+    >>> c = np.array([[1, 2, 3, 4],[4, 5, 6, 7], [7, 8, 9, 10]])
+    >>> b
+    array([5, 6, 7, 8])
+    >>> c
+    array([[1, 2, 3, 4],
+           [4, 5, 6, 7],
+           [7, 8, 9, 10]])
+    >>> c.dtype
+    dtype('int32')
+    >>> c.shape
+    (3, 4)
+    ```
+    数组c的shape有两个元素，因此它是二维数组，其中**第0轴的长度为3，第1轴的长度为4**.
