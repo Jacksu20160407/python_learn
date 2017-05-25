@@ -1,5 +1,9 @@
-# 1、 numy数组中row 为axis = 0，column为axis = 1
-e.g.
+conference
+[NumPy-快速处理数据][1]
+[1]:http://old.sebug.net/paper/books/scipydoc/numpy_intro.html
+
+- # 1、 numy数组中row 为axis = 0，column为axis = 1
+```
 >>> b = arange(12).reshape(3,4)
 >>> b
 array([[ 0,  1,  2,  3],
@@ -16,10 +20,10 @@ array([0, 4, 8])
 array([[ 0,  1,  3,  6],
        [ 4,  9, 15, 22],
        [ 8, 17, 27, 38]])
-
-# 2、 np.stack() 和 np.vstack() 和 np.hstack()
-# np.vstack()是按照行进行堆叠，但是维度还是原来的维度，np.stack()同样是按照行进行堆叠，但是维度增加啦，也就是简单的堆叠，没有打破界限。
-e.g.
+```
+- # 2、 np.stack() 和 np.vstack() 和 np.hstack()
+### np.vstack()是按照行进行堆叠，但是维度还是原来的维度，np.stack()同样是按照行进行堆叠，但是维度增加啦，也就是简单的堆叠，没有打破界限。
+```
 >>> a
 array([[ 7.,  3.],
        [ 8.,  5.]])
@@ -40,9 +44,9 @@ array([[ 7.,  3.],
 >>> np.hstack((a,b))
 array([[ 7.,  3.,  2.,  7.],
        [ 8.,  5.,  5.,  4.]])
-
-3. 推荐一个关于numpy中广播的ｐｏｓｔ：http://blog.csdn.net/yangnanhai93/article/details/50127747
-4. numpy的维度
+```
+- * 3. 推荐一个关于numpy中广播的ｐｏｓｔ：http://blog.csdn.net/yangnanhai93/article/details/50127747
+- * 4. numpy的维度
     ```
     >>> a = np.array([1, 2, 3, 4])
     >>> b = np.array((5, 6, 7, 8))
