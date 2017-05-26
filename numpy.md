@@ -1,6 +1,6 @@
 # Numpy Notes
 @(关键字)[numpy|数值计算]
-@(示例笔记本)[马克飞象|帮助|Markdown]
+ @(示例笔记本)[马克飞象|帮助|Markdown]
 conference
 [NumPy-快速处理数据][1]
 
