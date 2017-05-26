@@ -1,6 +1,6 @@
 conference
 [NumPy-快速处理数据][1]
-[1]:http://old.sebug.net/paper/books/scipydoc/numpy_intro.html
+
 
 - # 1、 numy数组中row 为axis = 0，column为axis = 1
 ```
@@ -63,3 +63,6 @@ array([[ 7.,  3.,  2.,  7.],
     (3, 4)
     ```
     数组c的shape有两个元素，因此它是二维数组，其中**第0轴的长度为3，第1轴的长度为4**.
+    
+    
+    [1]:http://old.sebug.net/paper/books/scipydoc/numpy_intro.html
