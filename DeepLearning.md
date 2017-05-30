@@ -74,12 +74,15 @@ http://blog.csdn.net/jiejinquanil/article/details/50042791
 http://www.cnblogs.com/tornadomeet/p/3432093.html
 ```
 ### 第三集 Gradient descent
-#### Gradient Descent理论基础
+#### Gradient Descent理论基础（可以查看视频‘梯度下降’的42分钟以后的部分）
 #### Learning Rate 调节
+    如果学习率调节太大，那么loss就会在短时间内出现的震荡现象；如果学习率非常大的话，有可能会使学习率出现爆炸现象；如果学习率调节太小，那么就会下降的非常慢。
 ##### Adaptive Learning Rates
 * 1 [Adagrad][1]:<br>
 * 2 [SGD][1]:<br>
-
+##### Feature scaling
+    为了使loss的等高线呈同心圆型，若是不同feature的大小不在一个数量级，那么得出来的loss等高线就是同心椭圆，当梯度下降的起始点不同的时候那么学习率等参数就会不同（因为椭圆存在长轴和短轴之分，在长轴上的学习率和在短轴上的学习率是不同的），但是同心圆型就不存在这个问题啦，所以需要Feature scaling。
+    Feature scaling 的方法，一般采用对一系列特征的第i维求均值和方差，然后这一系列特征的每个地i维特征值都减去这个均值并且除以这个方差。这样整个系列的特征的每一维的均值都是0，方差都是1。
 ### 第四集
 从概率的角度得出为什么p(x|c) = σ(z), z = w * x + b，也就是它的来源
 
@@ -87,6 +90,8 @@ http://www.cnblogs.com/tornadomeet/p/3432093.html
 logistics回归相对于linear回归而言，就是多经过了一个sigmoid函数。
 首先知道模型，之后利用模型sample出某些数据的概率。
 还有交叉熵的来源。
+关于判别模型和生成模型的区别
+关于Feature transformation，当当前特征无法完成分类任务的话，可以通过逻辑回归单元串联起来进行Feature transforma，之后在接一个逻辑回归单元就可以分类啦，（基本认为Feature transformation就是常说的特征提取吧，或者看做更高级特征，详情可以查看本节视频最后的Limitation of logistics regression部分）
 
 
 
