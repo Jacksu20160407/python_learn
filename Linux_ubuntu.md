@@ -1,13 +1,16 @@
 # Linux Notes
 [TOC]
 #### [设置屏幕分辨率](http://blog.csdn.net/janeqi1987/article/details/46984925)
-
-> root@xxx: xrandr -q
+```
+root@xxx: xrandr -q
+```
 会出现**Virtual1 connected ...**样式的字符，主要记住connected前面的名字, Virtual1 设备名称，后面会用到，maximum 8192 x 8192最大支持分辨率。
     在终端输入：cvt 1920 1080，显示如下：
-> root@xxx:/home/xxx/Desktop# cvt 1920 1080
-> @ 1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz (其中@代表#)
-> Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+```
+root@xxx:/home/xxx/Desktop# cvt 1920 1080
+# 1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz
+Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+```
 红色部分会在--newmode命令中用到，直接复制即可。
 接下来通过--newmode、--addmode、--output命令即可完成,如下：
 ```
@@ -18,7 +21,7 @@ root@xxx:/home/xxx/Desktop# xrandr --output Virtual1 --mode "1920x1080_60.00"
 此时，屏幕分辨率已经改变了。
 
 如果想把自定义屏幕分辨率设置为永久有效，在~/.profile文件中追加如下：
-
+```
 vim ~/.profile
 
 cvt 1920 1080
@@ -28,6 +31,7 @@ xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 
 xrandr --addmode Virtual1 "1920x1080_60.00"
 
 xrandr --output Virtual1 --mode "1920x1080_60.00"
+```
 :x 保存退出即可。
 ----------------------------------
 
