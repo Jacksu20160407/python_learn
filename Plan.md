@@ -4,3 +4,6 @@
 * [Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)
 * [MOOC](http://mooc.guokr.com/)
 * [kaggle](https://www.kaggle.com/)
+
+### First week of June
+* [机器学习与人工智能技术分享](https://www.zybuluo.com/vivounicorn/note/446479#516-)
