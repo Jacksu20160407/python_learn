@@ -2,7 +2,7 @@
 [TOC]
 #### [设置屏幕分辨率](http://blog.csdn.net/janeqi1987/article/details/46984925)
 
-> # xrandr -q
+> root@xxx: xrandr -q
 会出现**Virtual1 connected ...**样式的字符，主要记住connected前面的名字, Virtual1 设备名称，后面会用到，maximum 8192 x 8192最大支持分辨率。
     在终端输入：cvt 1920 1080，显示如下：
 > root@xxx:/home/xxx/Desktop# cvt 1920 1080
@@ -29,7 +29,7 @@ xrandr --addmode Virtual1 "1920x1080_60.00"
 
 xrandr --output Virtual1 --mode "1920x1080_60.00"
 :x 保存退出即可。
-
+----------------------------------
 
 
 
