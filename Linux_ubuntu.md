@@ -6,7 +6,7 @@
 会出现**Virtual1 connected ...**样式的字符，主要记住connected前面的名字, Virtual1 设备名称，后面会用到，maximum 8192 x 8192最大支持分辨率。
     在终端输入：cvt 1920 1080，显示如下：
 > root@xxx:/home/xxx/Desktop# cvt 1920 1080
-> # 1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz
+> @ 1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz (其中@代表#)
 > Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 红色部分会在--newmode命令中用到，直接复制即可。
 接下来通过--newmode、--addmode、--output命令即可完成,如下：
