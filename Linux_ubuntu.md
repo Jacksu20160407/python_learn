@@ -1,6 +1,7 @@
 # Linux Notes
 [TOC]
 #### [设置屏幕分辨率](http://blog.csdn.net/janeqi1987/article/details/46984925)
+#### [ubuntu下如何查看和设置分辨率][4]
 ```
 root@xxx: xrandr -q
 ```
@@ -242,4 +243,5 @@ website = '%s%s%s' % ('python', 'tab', '.com')
 2. http://blog.csdn.net/songrotek/article/details/50770154
 ```
 [3]:https://askubuntu.com/questions/624966/cant-login-after-nvidia-driver-install-v-14-04
+[4]:http://blog.csdn.net/jcgu/article/details/8650423
 
