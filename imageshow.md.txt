@@ -1,0 +1,2 @@
+this is for image show
+![image](/image/ss.jpg)
