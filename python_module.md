@@ -7,6 +7,19 @@ import sys
 current_file_path = os.path.abspath(sys.argv[0])
 print "Current path is : {}".format(current_file_path)
 ```
+**Note:**因为*argv[0]*和*__file__*都存在可能返回的是相对路径的情况，所以为保险起见，当需要获得当前脚本文件的绝对路径时，需要对*argv[0]*和*__file__*取绝对路径
+```
+os.path.realpath(__file__)
+os.path.abspath(sys.argv[0])
+
+```
+获得当前脚本的名字和路径
+```
+import os, sys
+dirname, filename = os.path.split(os.path.abspath(sys.argv[0]))
+print "runing from {}".format(dirname)
+print "file name is {}".format(filename)
+```
 
 ----
 
