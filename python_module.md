@@ -1,5 +1,5 @@
 # python中对文件、文件夹（文件操作函数）的操作需要涉及到os模块, sys模块和shutil模块等。
-[python __file__ 与argv[0]][2]<br>
+[python __file__ 与argv[0]][2]
 得到当前文件的执行路径可以通过：<br>
 ```
 import os
