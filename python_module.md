@@ -1,4 +1,14 @@
-# python中对文件、文件夹（文件操作函数）的操作需要涉及到os模块和shutil模块。
+# python中对文件、文件夹（文件操作函数）的操作需要涉及到os模块, sys模块和shutil模块等。
+[python __file__ 与argv[0]][2]<br>
+得到当前文件的执行路径可以通过：<br>
+```
+import os
+import sys
+current_file_path = os.path.abspath(sys.argv[0])
+print "Current path is : {}".format(current_file_path)
+```
+
+----
 
 得到当前工作目录，即当前Python脚本工作的目录路径: os.getcwd()
 
@@ -129,7 +139,7 @@ os.chdir("path")   换路径
  1 将文件夹下所有图片名称加上'_fc'
 
 python代码:
-
+```python
 # -*- coding:utf-8 -*-
 import re
 import os
@@ -165,9 +175,10 @@ change_name(img_dir)
 c = time.time() - start
 print('程序运行耗时:%0.2f'%(c))
 print('总共处理了 %s 张图片'%(i))
-
+```
 输出结果：
 
 程序运行耗时:0.11
 总共处理了 109 张图片
-[1]. http://www.cnblogs.com/rollenholt/archive/2012/04/23/2466179.html
+[1]:http://www.cnblogs.com/rollenholt/archive/2012/04/23/2466179.html
+[2]:http://andylin02.iteye.com/blog/933237
