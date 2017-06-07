@@ -1,4 +1,23 @@
 # python中对文件、文件夹（文件操作函数）的操作需要涉及到os模块, sys模块和shutil模块等。
+###关于命令行参数参数解析（argparse）
+```
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argment('--batch_size', type = int, default = 50, help = 'batch size')
+Flag， unparsed = parser.parse_known_args()
+print Flag
+print unparsed
+print "Flag.batch_size is {}".format(Flag.batch_size)
+```
+命令行Run Python xxx.py --batch_size 80 hhh 99<br>
+**Result:**
+Namespace(batch_size=80)
+['hh', '99']
+flag.batch_size is 80
+这是argparse的简单用法。
+
+
+
 [python __file__ 与argv[0]](http://andylin02.iteye.com/blog/933237)<br>
 得到当前文件的执行路径可以通过：<br>
 ```
