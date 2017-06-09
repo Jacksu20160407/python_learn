@@ -98,24 +98,34 @@ logistics回归相对于linear回归而言，就是多经过了一个sigmoid函�
 
 **Solution：**使用Relu函数(原因待查)和Relu-variant.**e.g,Elu**,**Maxout**(learnable Activation Function)<br>
 ![codecogsequ](/image/CodeCogsEqn.gif)<br>
+
 - Early Stoping (**for good result on testing data and overfiting**)
 ![ear_stop](/image/ear_stop.jpg)
+
 - Regularization(**for good result on testing data**)<br>
 **L2**
+
 ![l2](/image/l2.jpg)
+
 **L1**
+
 ![l1](/image/l1.jpg)
+
 - Dropout(**for good result on testing data**)<br>
 **Traing:**Each neuron has p% to dropout, so the the structure of the network changed.Using the new network for training and we resample the dropout neurons for each mini-batch.<br>
 **Testing:** *No dropout*.If the dropout rate at training is p%, all the weights times 1-p%. **e.g.** Assume that the dropout rate is 50%, If a weight w = 1 by training, set w  =0.5 for testing.(Intuitive Reasion or a kind of ensemble or below image)
 ![reason](/image/reason.jpg)
 - New activation function(**for good result on training data**)<br>
-The sigmoid function is not alway good enough because of the vanishing gradient problem.**Vanishing Gradient Problem**因为sigmoid，将±无穷映射到0-1之间，因此输入层的变化到输出层时就变得很小，这就造成输入层的梯度很小。
+The sigmoid function is not alway good enough because of the vanishing gradient problem.<br>
+**Vanishing Gradient Problem.**因为sigmoid，将±无穷映射到0-1之间，因此输入层的变化到输出层时就变得很小，求梯度之后，梯度呈现的现象就是输入层附近的几层梯度很小，但是输出层附近的梯度很大，导致的后果就是输出层附近的权值还是随机值的时候输出层附近的权值就已经收敛了。整个训练就停下啦！![vanishing](/image/vanishing.jpg)
+可以选用Relu或者Maxout
 - Adaptive Learning Rate(**for good result on training data**)<br>
-**Adagrad**<br>
+**Adagrad(?)**<br>
 **RMSProp**<br>![rmsprop](/image/rmsprop.jpg)
 **Adam**<br>![adam](/image/adam.jpg)
 **gradient descent prrocess**![gradient](/image/gradientdescent.jpg)
+
+第十集
 
 
 
