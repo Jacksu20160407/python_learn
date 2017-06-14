@@ -1,5 +1,18 @@
 # Linux Notes
 [TOC]
+####远程登录Linux
+- **ssh:**
+>ssh romete_user_name@192.168.xx.xx
+
+- **sftp:**
+远程下载文件到本地
+>sftp remote_user_name@192.168.xx.xx
+>
+>get -r needed_to_copy_to_local_folder/
+>
+>bye
+
+
 #### [设置屏幕分辨率](http://blog.csdn.net/janeqi1987/article/details/46984925)
 #### [ubuntu下如何查看和设置分辨率][4]
 ```
