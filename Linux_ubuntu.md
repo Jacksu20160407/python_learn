@@ -15,6 +15,8 @@
 
 #### [设置屏幕分辨率](http://blog.csdn.net/janeqi1987/article/details/46984925)
 #### [ubuntu下如何查看和设置分辨率][4]
+
+*recommend 1680 1050 *
 ```
 root@xxx: xrandr -q
 ```
