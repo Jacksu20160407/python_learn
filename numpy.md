@@ -1,6 +1,6 @@
 # Numpy Notes
 [NumPy-快速处理数据][1]
-
+[文件存取][2]
 
 - # numy数组中row 为axis = 0，column为axis = 1
 ```
@@ -84,4 +84,5 @@ array([10, -3,  8, -1,  6, -2,  4,  3,  2])
 ```
 - * numpy数组可以像c语言一样定义结构体数组以及对结构体数组进行操作。
     
- [1]:http://old.sebug.net/paper/books/scipydoc/numpy_intro.html
+[1]:http://old.sebug.net/paper/books/scipydoc/numpy_intro.html
+[2]:http://hyry.dip.jp/tech/book/page/scipy/numpy_file.html
