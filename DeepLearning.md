@@ -1,4 +1,4 @@
-
+用于记录什么东西，我看也行的
 ## Contents
 * [记录从TensorFlow中文社区学习TensorFlow的笔记](#记录从TensorFlow中文社区学习TensorFlow的笔记)
 * [Tensorflow offline install](Tensorflow-offline-install)
