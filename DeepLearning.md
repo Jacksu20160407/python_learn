@@ -3,6 +3,19 @@
 * [记录从TensorFlow中文社区学习TensorFlow的笔记](#记录从TensorFlow中文社区学习TensorFlow的笔记)
 * [Tensorflow offline install](Tensorflow-offline-install)
 * [Notes](#Notes)
+###李宏毅深度学习（2017）###
+####第二集####
+Computational Graph
+####第五集####
+空间变换层（Spatial Transformer Layer）：对输入的图像进行缩放，旋转，平移等操作。变换方式是通过矩阵操作实现的，也就是对原来的矩阵每一个点的`index`乘上一个权重矩阵，再加上一个变量值，变成一个新的坐标值。但是有的情况下，若是乘上的这个权重矩阵不是整数，那么transform后的`index`不是整数或者原图中不存在的点（也就是介于原图中两个坐标点之间），并且不能进行微分。所以必须对原图进行`Interpol`<br>
+缩放![rescal.jpg](/image/rescal.jpg)
+旋转![rotation.jpg](/image/rotation.jpg)
+权重不是整数![no_int_index.jpg](/image/no_int_index.jpg)
+Interpolation![interpolation.jpg](/image/interpolation.jpg)
+
+
+收件人：迈卡薇 四川省成都市武侯区女鞋之都工厂联盟订货中心603-2 电话028-83344963 
+
 
 ## 记录从TensorFlow中文社区学习TensorFlow的笔记
 * Tensorboard 使用：<br>
@@ -46,14 +59,22 @@ Xaiver Glorot 和Youhua Bengio在一篇论文中指出，深度学习中权值�
   将特征值和label画出来，探索两者之间的关系，比如宝可梦cp值和进化后的cp值得关系，可以发现两者之间在不同种类上时，两者之间的关系有差异，这说明要将种类这个选项加入模型中。<br>
   探索输入特征和输出的关系的话，可以将输入特征和label画出来查看两者之间的关系，也就是查看特征值矩阵对于overfitting,可以利用regularation, 主要是在loss最后加上一个λ**w**,其中w越小越好，w越小就会使整个模型越平滑，对输入的噪声越不敏感，可以得到比较好的结果。λ越大就表示regularization的重要度越大。另外，regularization不用考虑b的值，因为b的变化，表示整个模型在坐标上的上下移动。
 ### 深度学习
-RNN<br>
- Pyramidal RNN "a neunal network "<br>
+RNN![rnn](/image/rnn.jpg)<br>
+![naive_rnn](/image/naive_rnn.jpg)
+![lstm](/image/lstm.jpg)
+慢点可以记住以前的事情，貌似很复杂，但是不知道这么复杂的原因是什么？？lstm faster than RNN
+<br>**delay 3 steps**
+
+
+
+ DeepRnn![deep_rnn](/image/deep_rnn.jpg)<br>
+ Pyramidal RNN "a neunal network "![pyramidal_rnn](/image/pyramidal_Rnn.jpg)<br>
  LSTM GRU
 ### 李宏毅深度学习的第一集没有看懂，主要是因为rnn和lstm不懂
 ### 李宏毅第二集
 越复杂的model，性能不一定越好。
 #### 模型的误差一般来自两方面：
-1、bias
+1、bias<br>
 2、variance<br>
 至于为什么来自这两方面，涉及到数理与统计的知识。<br>
 随着模型复杂度的增加，bias一般会越来越小，但是variance会越来越大，两者结合起来看的话，相对简单的模型会有大的bias并且小的variance，也可以理解为<br>underfiting（欠拟合），相对复杂的模型会有小的bias并且大的variance，也可以理解为overfiting（过拟合）。<br>
@@ -140,7 +161,21 @@ flatten的过程：<br>
 
 ![parmaters](/image/parmeters_each_filter.jpg)
 ![cnn_each_layer](/image/cnn_output_each_layer.jpg)
-这里主要理解下每一个卷积层滤波器参数的多少和每一层的输入输出大小，第一层输入为`1 * 28*28`，也就是一个通道的大小为`28*28`的图像，第一个滤波器是`3*3`的，输入只有一张图像（也可以理解为只有一个channel），因此每个滤波器只有`3*3 * 1=9`个参数，总共有25个滤波器,因此总共有`25 * 3*3 *1`个参数，经过第一层滤波器后，得到的输出是`25 * 26*26`，即25个滤波器得到25个通道，图像大小为`26*26`![CodeCogsEqn_src.gif](/image/CodeCogsEqn_src.gif)；第二个滤波器也是`3*3`的,输入是上一层得到的25张图像（也就是有25个channel）因此每一个滤波器有`3*3 * 25 = 225`个参数，总共有50个滤波器，因此总共有`50 * 3*3 *25`个参数。
+这里主要理解下每一个卷积层滤波器参数的多少和每一层的输入输出大小，第一层输入为`1 * 28*28`，也就是一个通道的大小为`28*28`的图像，第一个滤波器是`3*3`的，输入只有一张图像（也可以理解为只有一个channel），因此每个滤波器只有`3*3 * 1=9`个参数，总共有25个滤波器,因此总共有`25 * 3*3 *1`个参数，经过第一层滤波器后，得到的输出是`25 * 26*26`，即25个滤波器得到25个通道，图像大小为`26*26`![CodeCogsEqn_src.gif](/image/CodeCogsEqn_src_back.gif)；第二个滤波器也是`3*3`的,输入是上一层得到的25张图像（也就是有25个channel）因此每一个滤波器有`3*3 * 25 = 225`个参数，总共有50个滤波器，因此总共有`50 * 3*3 *25`个参数。<br>
+**[What learn in convolution layer][2]**
+visulize k-th filter:<br>
+固定k-th filter 的参数，找一个输入使k-th filter的输出最大（输出可以用filter的输出和表示)![cnn_learn](/image/cnn_learn.jpg)
+但是有的时候使filter的输出最大的输入并不一定好看，也就是我们可能看不懂（人类无法理解的形式）可以通过添加正则项<br>
+For color image:[here][3]
+
+###第十一集
+为什么要深？？？<br>
+简而言之就是多级分类，第一层是第二层的预分类，第二层是第三层的预分类，...第n-1层是第n层的预分类；前n-1层构成了第n层的预分类，这样到第n层分类的时候就有可能变得更简单了。<br>
+用数学上的语言就是前一层的分类就是将输入数据映射到了另一个空间（或者叫高维空间）这样就有可能变得分类更简单啦，若是还不好分类，那就继续映射一次，在分类（若是还不好分类，那就继续映射咯，直到能分开为止）<br>
+用剪窗花类比，前期的特征映射就是类似于剪窗花的对折纸张，![analogy.jpg](/image/analogy.jpg)
+### 第十三集###
+**PCA**
+
 
 
 
@@ -153,3 +188,5 @@ flatten的过程：<br>
 http://nooverfit.com/wp/pycon-2016-tensorflow-%E7%A0%94%E8%AE%A8%E4%BC%9A%E6%80%BB%E7%BB%93-tensorflow-%E6%89%8B%E6%8A%8A%E6%89%8B%E5%85%A5%E9%97%A8-%E7%94%A8%E4%BA%BA%E8%AF%9D%E8%A7%A3%E9%87%8Acnn-%E7%AC%AC%E4%B8%89/
 ```
 [1]:http://blog.csdn.net/luo123n/article/details/48239963
+[2]:http://cs231n.github.io/understanding-cnn/
+[3]:https://arxiv.org/abs/1312.6034

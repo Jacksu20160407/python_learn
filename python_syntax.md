@@ -1,3 +1,4 @@
+- set的[操作](1)
 - 如何将可迭代对象变成迭代器？
     
     ```
@@ -15,3 +16,4 @@
 - repr()函数<br>
 repr是representation及描述的意思，它返回的是一个对象`在Python中的描述`，简言之就是告诉我们这个变量在背地里是什么样子的，以及背地里怎么被Python处理（玩弄）的。
   
+[1]:http://www.cnblogs.com/tina-python/p/5468495.html

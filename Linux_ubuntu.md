@@ -1,5 +1,22 @@
 # Linux Notes
 [TOC]
+
+- pip安装加速问题可以参考下面或者[这里](7)<br>
+![pip_accelerate](/image/pip_accelerate.jpg) 
+
+####.sh文件[执行][6]
+- 点`.`执行，需要为文件添加权限
+> $chmod +x file.sh
+
+  之后使用`./file.sh`执行<br>
+
+- source执行
+> source file.sh
+
+
+
+####ubuntu [下文件压缩/解压命令总结][5]
+
 ####远程登录Linux
 - **ssh:**
 >ssh romete_user_name@192.168.xx.xx
@@ -259,4 +276,6 @@ website = '%s%s%s' % ('python', 'tab', '.com')
 ```
 [3]:https://askubuntu.com/questions/624966/cant-login-after-nvidia-driver-install-v-14-04
 [4]:http://blog.csdn.net/jcgu/article/details/8650423
-
+[5]:http://blog.csdn.net/luo86106/article/details/6946255
+[6]:http://blog.csdn.net/u012336923/article/details/50474692
+[7]:http://blog.csdn.net/Yakumoyukarilan/article/details/51340358

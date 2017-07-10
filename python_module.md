@@ -1,3 +1,14 @@
+#os模块[详解][5]
+
+
+#glob
+glob 用于查找满足指定格式的路径名，返回值是随机顺序的list。“*,?,[]”用于匹配字符，若是想匹配“*”或者“？”字符，可以将它们用中括号括起来，e.g."[?]"匹配“？”.<br> For details in [here][3] and [there][4]
+
+```
+from glob import glob
+
+```
+
 # python中对文件、文件夹（文件操作函数）的操作需要涉及到os模块, sys模块和shutil模块等。
 ###关于命令行参数参数解析（argparse）
 ```
@@ -214,3 +225,6 @@ print('总共处理了 %s 张图片'%(i))
 总共处理了 109 张图片
 [1]:http://www.cnblogs.com/rollenholt/archive/2012/04/23/2466179.html
 [2]:http://andylin02.iteye.com/blog/933237
+[3]:https://docs.python.org/3/library/glob.html
+[4]:http://blog.csdn.net/jy692405180/article/details/52245829
+[5]:http://www.cnblogs.com/cherishry/p/5725977.html

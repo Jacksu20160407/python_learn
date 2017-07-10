@@ -1,6 +1,10 @@
 # Numpy Notes
 [NumPy-快速处理数据][1]
+
 [文件存取][2]
+
+[Numpy basic][3]
+
 
 - # numy数组中row 为axis = 0，column为axis = 1
 ```
@@ -86,3 +90,4 @@ array([10, -3,  8, -1,  6, -2,  4,  3,  2])
     
 [1]:http://old.sebug.net/paper/books/scipydoc/numpy_intro.html
 [2]:http://hyry.dip.jp/tech/book/page/scipy/numpy_file.html
+[3]:http://blog.chinaunix.net/uid-21633169-id-4408596.html
