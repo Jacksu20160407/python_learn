@@ -1,0 +1,82 @@
+website:
+     http://www.labri.fr/perso/nrougier/teaching/numpy.100/index.html
+     http://lijin-thu.github.io/
+     http://man.lupaworld.com/content/manage/ringkee/basic.htm
+
+
+
+1. x Simple, given a string of words, return the length of the shortest word(s).
+   String will never be empty and you do not need to account for different data types.
+    Solution:
+    def find_short(s):
+        l = min(len(x) for x in s.split())
+        return l
+test.describe("Basic Tests")
+test.assert_equals(find_short("bitcoin take over the world maybe who knows perhaps"), 3)
+test.assert_equals(find_short("turns out random test cases are easier than writing out basic ones"), 3)
+test.assert_equals(find_short("lets talk about javascript the best language"), 3)
+test.assert_equals(find_short("i want to travel the world writing code one day"), 1)
+test.assert_equals(find_short("Lets all go on holiday somewhere very cold"), 2)
+2. Given an integral number, determine if it's a square number:
+
+    In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+
+The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+Examples
+
+is_square (-1) # => false
+is_square   3 # => false
+is_square   4 # => true
+is_square  25 # => true
+is_square  26 # => false
+    Solution:
+    def is_square(n):
+        return n**.5 % 1 == 0 if n > 0 else False  
+3. Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+For example:
+
+ persistence(39) => 3  # Because 3*9 = 27, 2*7 = 14, 1*4=4
+                       # and 4 has only one digit.
+
+ persistence(999) => 4 # Because 9*9*9 = 729, 7*2*9 = 126,
+                       # 1*2*6 = 12, and finally 1*2 = 2.
+
+ persistence(4) => 0   # Because 4 is already a one-digit number.
+
+ persistence(39) # returns 3, because 3*9=27, 2*7=14, 1*4=4
+                 # and 4 has only one digit
+
+ persistence(999) # returns 4, because 9*9*9=729, 7*2*9=126,
+                  # 1*2*6=12, and finally 1*2=2
+
+ persistence(4) # returns 0, because 4 is already a one-digit number
+     
+         Solution:
+import numpy as np
+def persistence(n):
+    num = 0
+    while(n>9):
+        list_result = []
+        while(n>0):
+            list_result.append(n%10)
+            n /= 10
+        n = np.prod(list_result)
+        num += 1
+    return num
+                 
+ 4. You live in the city of Cartesia where all roads are laid out in a perfect grid. 
+ You arrived ten minutes too early to an appointment, so you decided to take the opportunity 
+ to go for a short walk. The city provides its citizens with a Walk Generating App on their
+ phones -- everytime you press the button it sends you an array of one-letter strings representing 
+ directions to walk (eg. ['n', 's', 'w', 'e']). You know it takes you one minute to traverse one city
+ block, so create a function that will return true if the walk the app gives you will take you exactly
+ ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. 
+ Return false otherwise.
+
+    Note: you will always receive a valid array containing a random assortment of direction 
+    letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
+    Solution:
+
+
+
