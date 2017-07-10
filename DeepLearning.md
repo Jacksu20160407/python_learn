@@ -3,6 +3,7 @@
 * [记录从TensorFlow中文社区学习TensorFlow的笔记](#记录从TensorFlow中文社区学习TensorFlow的笔记)
 * [Tensorflow offline install](Tensorflow-offline-install)
 * [Notes](#Notes)
+
 ###李宏毅深度学习（2017）###
 ####第二集####
 Computational Graph
