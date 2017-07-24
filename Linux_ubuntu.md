@@ -30,7 +30,7 @@ grep "^-"
 
 
 
-- pip安装加速问题可以参考下面或者[这里](7)<br>
+## pip安装加速问题可以参考下面或者[这里](7)<br>
 ![pip_accelerate](/image/pip_accelerate.jpg) 
 
 ####.sh文件[执行][6]
@@ -44,9 +44,9 @@ grep "^-"
 
 
 
-####ubuntu [下文件压缩/解压命令总结][5]
+## ubuntu [下文件压缩/解压命令总结][5]
 
-####远程登录Linux
+#### 远程登录Linux
 - **ssh:**
 >ssh romete_user_name@192.168.xx.xx
 
