@@ -4,6 +4,12 @@
 * [Tensorflow offline install](Tensorflow-offline-install)
 * [Notes](#Notes)
 
+
+
+### http://blog.csdn.net/a819825294/article/details/53425108
+### http://www.cnblogs.com/dmzhuo/p/4969751.html
+### http://blog.csdn.net/xbinworld/article/details/69367281
+
 ###李宏毅深度学习（2017）###
 ####第二集####
 Computational Graph
