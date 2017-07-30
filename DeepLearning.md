@@ -4,7 +4,7 @@
 * [Tensorflow offline install](Tensorflow-offline-install)
 * [Notes](#Notes)
 
-###  [tf.train.exponential_decay的用法](http://blog.csdn.net/uestc_c2_403/article/details/72213286)
+###  [tf.train.exponential_decay的用法][http://blog.csdn.net/uestc_c2_403/article/details/72213286]
 
 ### http://blog.csdn.net/a819825294/article/details/53425108
 ### http://www.cnblogs.com/dmzhuo/p/4969751.html
