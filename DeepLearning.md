@@ -4,7 +4,7 @@
 * [Tensorflow offline install](Tensorflow-offline-install)
 * [Notes](#Notes)
 
-
+###  [tf.train.exponential_decay的用法](http://blog.csdn.net/uestc_c2_403/article/details/72213286)
 
 ### http://blog.csdn.net/a819825294/article/details/53425108
 ### http://www.cnblogs.com/dmzhuo/p/4969751.html
@@ -21,7 +21,7 @@ Computational Graph
 Interpolation![interpolation.jpg](/image/interpolation.jpg)
 
 
-收件人：迈卡薇 四川省成都市武侯区女鞋之都工厂联盟订货中心603-2 电话028-83344963 
+
 
 
 ## 记录从TensorFlow中文社区学习TensorFlow的笔记
