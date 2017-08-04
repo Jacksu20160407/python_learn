@@ -1,7 +1,9 @@
-#os模块[详解][5]
+# mulprocess 多进程
+
+# os模块[详解][5]
 
 
-#glob
+# glob
 glob 用于查找满足指定格式的路径名，返回值是随机顺序的list。“*,?,[]”用于匹配字符，若是想匹配“*”或者“？”字符，可以将它们用中括号括起来，e.g."[?]"匹配“？”.<br> For details in [here][3] and [there][4]
 
 ```
@@ -228,3 +230,5 @@ print('总共处理了 %s 张图片'%(i))
 [3]:https://docs.python.org/3/library/glob.html
 [4]:http://blog.csdn.net/jy692405180/article/details/52245829
 [5]:http://www.cnblogs.com/cherishry/p/5725977.html
+[6]:http://www.cnblogs.com/kaituorensheng/p/4445418.html
+[7]:http://www.cnblogs.com/tkqasn/p/5701230.html
