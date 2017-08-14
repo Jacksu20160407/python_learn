@@ -1,5 +1,9 @@
 # Linux Notes
 [TOC]
+## Linux统计当前目录下符合条件的文件数量
+```
+find -name "*.image"|wc -l
+```
 
 ## Linux[统计当前目录下文件和文件夹的个数](http://www.cnblogs.com/zeze/p/6839230.html)
 - 统计**当前文件夹下文件的个数**，包含子文件夹内的文件<br>
