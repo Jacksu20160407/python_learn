@@ -5,6 +5,7 @@
 * [Notes](#Notes)
 # 2017-08-24
 [训练的神经网络不工作？一文带你跨过这37个坑](https://zhuanlan.zhihu.com/p/28093629)
+[斯坦福李飞飞2017CS231n最新课程视频来啦](https://zhuanlan.zhihu.com/p/28522637)
 [八大排序算法](http://www.imooc.com/article/3927)
 
 ###  [tf.train.exponential_decay的用法](http://blog.csdn.net/uestc_c2_403/article/details/72213286)
