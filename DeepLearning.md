@@ -8,6 +8,7 @@
 [斯坦福李飞飞2017CS231n最新课程视频来啦](https://zhuanlan.zhihu.com/p/28522637)<br>
 [八大排序算法](http://www.imooc.com/article/3927)<br>
 [人工智能资料](https://zhuanlan.zhihu.com/p/28662985)
+[没有博士学位，照样玩转TensorFlow深度学习](https://baijiahao.baidu.com/s?id=1557380976232018&wfr=spider&for=pc)
 
 ###  [tf.train.exponential_decay的用法](http://blog.csdn.net/uestc_c2_403/article/details/72213286)
 
