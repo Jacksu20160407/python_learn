@@ -1,3 +1,4 @@
+- python 元类 [type](http://www.imooc.com/article/21100)
 - set的[操作](1)
 - 如何将可迭代对象变成迭代器？
     
