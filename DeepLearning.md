@@ -3,6 +3,11 @@
 * [记录从TensorFlow中文社区学习TensorFlow的笔记](#记录从TensorFlow中文社区学习TensorFlow的笔记)
 * [Tensorflow offline install](Tensorflow-offline-install)
 * [Notes](#Notes)
+
+
+# [正则化是如何实现对过拟合的限制的](https://www.cnblogs.com/alexanderkun/p/6922428.html)
+主要体现在模型参数求导后，模型参数的更新方式，使权值参数变小，一般而言，权值越小代表模型越简单，从而降低对数据的拟合程度，限制过拟合。
+
 # 2017-08-24
 [训练的神经网络不工作？一文带你跨过这37个坑](https://zhuanlan.zhihu.com/p/28093629)<br>
 [斯坦福李飞飞2017CS231n最新课程视频来啦](https://zhuanlan.zhihu.com/p/28522637)<br>
