@@ -21,6 +21,7 @@ conv_basee = VGG116(weights='imagenet',
 - input_shape:用于输入网络的Tensor的shape，这个参数是可选的，如果不设置的话，那么网络可以接受任意shape的输入。<br>
 你可以使用下面的代码查看网络整体结构。
 `conv_base.summary()`
+`
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
@@ -65,7 +66,7 @@ block5_pool (MaxPooling2D)   (None, 4, 4, 512)         0
 Total params: 14,714,688
 Trainable params: 14,714,688
 Non-trainable params: 0
-_________________________________________________________________
+_________________________________________________________________`
 这个网络由两种conv-pooling组成，一种是两个卷积层加一个最大pooling层，共有两个，另一种是三个卷积层加一个最大pooling层，共有三个，最后的输出是（4,4,512），我们要在这个特征输出上堆叠一个全连接层分类器。<br>
 现在我们有两条路可以走：
 - 在数据集上运行VGG16的卷积结构，将输出结果保存成Numpy array的形式，之后将这些数据输入densely-connected 分类器。这个过程非常简单快捷，因为输入的每一幅图像都只进行一次卷积操作。这样操作的话有一个弊端就是不能对数据进行augmentation（？）。
@@ -223,7 +224,223 @@ plt.legend()
 
 plt.show()
 ```
-[image_plot](data:image/png;base64,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%0ATxwfuPtF7j4YuDWa9nH0vSb6XkG4yTs4pbOSSA6IU23THFUxqTZvbI426Nnerj3XxAn6c4HeZtbL%0AzNoB44HZyQnMrJuZJdZ1M/BwNL2LmbVPpAGGA7WfJmrlTj/99FoPWt1///1861vfanC5Qw45BIAP%0APviAcePG1Zlm5MiRlJeXN7ie+++/n6qka/kxY8bw8ccfx8m6NKN01783R1UMKOhKDXEuB4AxwDJC%0AK55bo2lTgfN9fxXQO1GaXwDto+lfABYR6vwXAV9vbFutsXrn5z//uU+aNKnatJNOOslfeeWVBpfr%0A1KlTo+s+7bTTqnXYVpfi4mKvrKxsPKOtQKaPVTqku5OsuNU2raEqRrIX6Wyn35Kf1hj0N2zY4IWF%0Ahf7pp5+6u/vKlSu9R48evnfvXt+6daufccYZPnjwYO/Xr58/9dRT+5ZLBP2VK1d637593d29qqrK%0AL7nkEu/Tp49fcMEFPmzYsH1B/+qrr/ahQ4d6aWmp33777e7u/sADD3jbtm29X79+PnLkSHevfhK4%0A9957vW/fvt63b999PXSuXLnS+/Tp41dddZWXlpb6qFGj9vWgmWz27Nk+bNgwHzRokH/xi1/0Dz/8%0A0N3dt27d6pMmTfJ+/fp5//79/fHHH3d392eeecYHDx7sAwYM8DPOOKPO3yrTx+pANccDSqk0W1Qg%0Al6bK2aB//fXup52W3s/11zf+g37pS1/aF9Dvvvtu/853vuPu4QnZzZs3u7t7ZWWlH3vssb537153%0Arzvo33vvvX7FFVe4u/uCBQu8oKBgX9BPdGm8e/duP+2003zBggXuXruknxgvLy/3fv36+bZt23zr%0A1q1eWlrqb7zxhq9cudILCgr2dbl88cUX+yOPPFJrnzZu3Lgvrw899JDfeOON7u7+ve99z69P+lE2%0Abtzo69ev96KiIl+xYkW1vNaU7UE/3x9QkuwVN+jnXN87zWXChAnMnDkTgJkzZzJhwgQgnDRvueUW%0ABgwYwJlnnsmaNWtYt25dvet59dVXueyyywAYMGAAAwYM2Ddv1qxZDBkyhMGDB7N48eI6O1NLNmfO%0AHC688EI6derEIYccwkUXXcRrr70GQK9evRg0aBBQf/fNFRUVnH322fTv35977rmHxYsXA/D8889z%0AzTXX7EvXpUsXXn/9dU499VR69eoF5G73y3FvpjZX/btIczso0xlIVfRiqRY3duxYbrjhBt544w2q%0A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%0AJI/8f8VPE/svVwa/AAAAAElFTkSuQmCC%0A)
+[image_plot](ttt)
+由图可知，我们达到了90%的验证精度，比我们之前的所有结果都好。同时我们也发现一个问题，虽然我们使用了一个较大比率的dropout，但是还是过拟合了。这是因为这种方法无法采用数据augmentation，对小数据集进行augmentation操作是防止过拟合的一个很必要的操作。
+下面我们利用上文提到的第二种方法进行试验，虽然这种方法比较慢并且运行代价很高，但是这种方法可以在训练过程中使用数据augmentation，并且能扩展卷积网络模型，进行端到端的训练。这种方法最好在GPU上进行试验，如果你在CPU上进行试验，最好选用第一种方法。
+你可以像添加卷积层一样对Sequential模型添加VGG16卷积网络结构：
+```
+from keras import models
+from keras import layers
+
+model = models.Sequential()
+model.add(conv_base)
+model.add(layers.Flatten())
+model.add(layers.Dense(256, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+```
+查看一下模型
+`model.summary()`
+```
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+vgg16 (Model)                (None, 4, 4, 512)         14714688  
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 8192)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 256)               2097408   
+_________________________________________________________________
+dense_4 (Dense)              (None, 1)                 257       
+=================================================================
+Total params: 16,812,353
+Trainable params: 16,812,353
+Non-trainable params: 0
+_________________________________________________________________
+```
+可以发现VGG16的卷及网络结构共有14714688个参数，这是非常大的一个网络。我们添加的网络只有200万个参数。
+在我们编译和训练网络之前，我们需要固定住卷积网络结构，固定指的是在训练过程中网络结构的某一层或者某些层参数不会更新，如果我们不固定的话，卷积网络结构在之前的训练集上学习到的特征表示就会发生改变。因为最顶层的全连接层的权值是随机初始化的，所以在网络传播过程中参数会发生很大的改变，这将在很大程度上破坏网络之前学习到的特征表示。
+在keras中你可以通过设置一个网络结构的trainable属性为False来固定住网络。
+```
+print('This is the number of trainable weights '
+      'before freezing the conv base:', len(model.trainable_weights))
+```
+This is the number of trainable weights before freezing the conv base: 30
+```
+conv_base.trainable = False
+print('This is the number of trainable weights '
+      'after freezing the conv base:', len(model.trainable_weights))
+```
+This is the number of trainable weights after freezing the conv base: 4
+有了这个设置之后，只有我们添加的全连接层可以被训练，共包括四个tensor：两层，每一层中一个权值矩阵和一个偏置向量。为了让这个设置生效，我们必须先编译这个模型。另外，如果你编译后又改变了可训练权值，那么你还需要重新编译才能生效，否者这些改动就是没有效果的，会被忽略。
+```
+from keras.preprocessing.image import ImageDataGenerator
+
+train_datagen = ImageDataGenerator(
+      rescale=1./255,
+      rotation_range=40,
+      width_shift_range=0.2,
+      height_shift_range=0.2,
+      shear_range=0.2,
+      zoom_range=0.2,
+      horizontal_flip=True,
+      fill_mode='nearest')
+
+# Note that the validation data should not be augmented!
+test_datagen = ImageDataGenerator(rescale=1./255)
+
+train_generator = train_datagen.flow_from_directory(
+        # This is the target directory
+        train_dir,
+        # All images will be resized to 150x150
+        target_size=(150, 150),
+        batch_size=20,
+        # Since we use binary_crossentropy loss, we need binary labels
+        class_mode='binary')
+
+validation_generator = test_datagen.flow_from_directory(
+        validation_dir,
+        target_size=(150, 150),
+        batch_size=20,
+        class_mode='binary')
+
+model.compile(loss='binary_crossentropy',
+              optimizer=optimizers.RMSprop(lr=2e-5),
+              metrics=['acc'])
+
+history = model.fit_generator(
+      train_generator,
+      steps_per_epoch=100,
+      epochs=30,
+      validation_data=validation_generator,
+      validation_steps=50,
+      verbose=2)
+model.save('cats_and_dogs_small_3.h5')
+```
+```
+Found 2000 images belonging to 2 classes.
+Found 1000 images belonging to 2 classes.
+Epoch 1/30
+74s - loss: 0.4465 - acc: 0.7810 - val_loss: 0.2056 - val_acc: 0.9120
+Epoch 2/30
+72s - loss: 0.2738 - acc: 0.8905 - val_loss: 0.1239 - val_acc: 0.9550
+Epoch 3/30
+72s - loss: 0.2088 - acc: 0.9145 - val_loss: 0.1194 - val_acc: 0.9560
+Epoch 4/30
+72s - loss: 0.1835 - acc: 0.9280 - val_loss: 0.1025 - val_acc: 0.9550
+Epoch 5/30
+72s - loss: 0.1642 - acc: 0.9330 - val_loss: 0.0903 - val_acc: 0.9680
+Epoch 6/30
+72s - loss: 0.1360 - acc: 0.9410 - val_loss: 0.0794 - val_acc: 0.9740
+Epoch 7/30
+72s - loss: 0.1426 - acc: 0.9465 - val_loss: 0.0968 - val_acc: 0.9560
+Epoch 8/30
+72s - loss: 0.1013 - acc: 0.9580 - val_loss: 0.1411 - val_acc: 0.9430
+Epoch 9/30
+72s - loss: 0.1177 - acc: 0.9500 - val_loss: 0.2105 - val_acc: 0.9310
+Epoch 10/30
+72s - loss: 0.0949 - acc: 0.9620 - val_loss: 0.0900 - val_acc: 0.9710
+Epoch 11/30
+72s - loss: 0.0915 - acc: 0.9655 - val_loss: 0.1204 - val_acc: 0.9630
+Epoch 12/30
+72s - loss: 0.0782 - acc: 0.9645 - val_loss: 0.0995 - val_acc: 0.9650
+Epoch 13/30
+72s - loss: 0.0717 - acc: 0.9755 - val_loss: 0.1269 - val_acc: 0.9580
+Epoch 14/30
+72s - loss: 0.0670 - acc: 0.9715 - val_loss: 0.0994 - val_acc: 0.9680
+Epoch 15/30
+71s - loss: 0.0718 - acc: 0.9735 - val_loss: 0.0558 - val_acc: 0.9790
+Epoch 16/30
+72s - loss: 0.0612 - acc: 0.9780 - val_loss: 0.0870 - val_acc: 0.9690
+Epoch 17/30
+71s - loss: 0.0693 - acc: 0.9765 - val_loss: 0.0972 - val_acc: 0.9720
+Epoch 18/30
+71s - loss: 0.0596 - acc: 0.9785 - val_loss: 0.0832 - val_acc: 0.9730
+Epoch 19/30
+71s - loss: 0.0497 - acc: 0.9800 - val_loss: 0.1160 - val_acc: 0.9610
+Epoch 20/30
+71s - loss: 0.0546 - acc: 0.9780 - val_loss: 0.1057 - val_acc: 0.9660
+Epoch 21/30
+71s - loss: 0.0568 - acc: 0.9825 - val_loss: 0.2012 - val_acc: 0.9500
+Epoch 22/30
+71s - loss: 0.0493 - acc: 0.9830 - val_loss: 0.1384 - val_acc: 0.9610
+Epoch 23/30
+71s - loss: 0.0328 - acc: 0.9905 - val_loss: 0.1281 - val_acc: 0.9640
+Epoch 24/30
+71s - loss: 0.0524 - acc: 0.9860 - val_loss: 0.0846 - val_acc: 0.9760
+Epoch 25/30
+71s - loss: 0.0422 - acc: 0.9845 - val_loss: 0.1002 - val_acc: 0.9670
+Epoch 26/30
+71s - loss: 0.0617 - acc: 0.9825 - val_loss: 0.0858 - val_acc: 0.9760
+Epoch 27/30
+71s - loss: 0.0568 - acc: 0.9830 - val_loss: 0.0889 - val_acc: 0.9700
+Epoch 28/30
+71s - loss: 0.0296 - acc: 0.9915 - val_loss: 0.1406 - val_acc: 0.9620
+Epoch 29/30
+71s - loss: 0.0432 - acc: 0.9890 - val_loss: 0.1535 - val_acc: 0.9650
+Epoch 30/30
+71s - loss: 0.0354 - acc: 0.9885 - val_loss: 0.1832 - val_acc: 0.9510
+```
+画出结果
+```
+acc = history.history['acc']
+val_acc = history.history['val_acc']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs = range(len(acc))
+
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'b', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.legend()
+
+plt.figure()
+
+plt.plot(epochs, loss, 'bo', label='Training loss')
+plt.plot(epochs, val_loss, 'b', label='Validation loss')
+plt.title('Training and validation loss')
+plt.legend()
+
+plt.show()
+```
+[imageplot](sllsjdf1)
+由图可知，验证集精度达到了96%，这比以前的结果都要好。
+## Fine-tuning
+另一个模型重复使用的方法是fine-tuning，这个是特征提取的补充，fine-tuning由“冰冻”卷积网络结构的部分顶部“解冻”层和我们添加的全连接层构成。称为“微调”是因为这个操作只是稍微调整部分重用结构模型的高层抽象表示，使网络更适合当前工作。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
