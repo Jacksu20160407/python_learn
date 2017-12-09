@@ -1,3 +1,4 @@
+- [书籍推荐][1]
 - python [性能分析优化](http://python.jobbole.com/88926/)
 - python 元类 [type](http://www.imooc.com/article/21100)
 - set的[操作](http://www.cnblogs.com/tina-python/p/5468495.html)
@@ -17,4 +18,4 @@
   
 - repr()函数<br>
 repr是representation及描述的意思，它返回的是一个对象`在Python中的描述`，简言之就是告诉我们这个变量在背地里是什么样子的，以及背地里怎么被Python处理（玩弄）的。<br>
-
+[1]:http://blog.jobbole.com/106093/
