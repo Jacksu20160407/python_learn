@@ -1,2 +1,0 @@
-![image](/image/ss.jpg
-)
