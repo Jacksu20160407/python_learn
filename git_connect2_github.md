@@ -31,3 +31,5 @@ Git常用[命令](http://blog.csdn.net/dengsilinming/article/details/8000622)
       ```
 
 Congratulations!! You can rewrite something in local and push it to remote repository using above commands
+
+[Git from the inside out](https://codewords.recurse.com/issues/two/git-from-the-inside-out)
